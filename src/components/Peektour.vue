@@ -7,7 +7,7 @@
 export default {
   name: 'PeekTour',
   props: {
-    images,
+    albums,
     metaData
   }
 }
