@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <peek-tour />
+    <peek-tour :albums="albums"/>
   </div>
 </template>
 
@@ -12,6 +12,19 @@ export default {
   name: 'Home',
   components: {
     PeekTour
+  },
+  data() {
+    return {
+      albums: [{
+      name: 'album1',
+      images: [{
+        name: 'test1',
+        url: 'https://via.placeholder.com/150',
+        title: '',
+        alt: ''
+      }]
+    }]
+    }
   }
 }
 </script>

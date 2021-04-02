@@ -1,13 +1,16 @@
 <template>
   <div class="album">
+    {{album}}
   </div>
 </template>
 
 <script>
 export default {
   name: 'Album',
-  props: {
-    album: Object
+  computed: {
+    album() {
+      return this.$route.params.album
+    }
   }
 }
 </script>
