@@ -7,7 +7,7 @@
 export default {
   name: 'PeekTour',
   props: {
-    albums
+    albums: Array
   }
 }
 </script>
