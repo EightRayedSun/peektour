@@ -1,5 +1,6 @@
 <template>
   <div class="peektour">
+    <router-link to="/">Home</router-link>
   </div>
 </template>
 
