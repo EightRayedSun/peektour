@@ -1,13 +1,16 @@
 <template>
   <div class="image">
+    {{ imageObject }}
   </div>
 </template>
 
 <script>
 export default {
   name: 'Image',
-  props: {
-    image: Object
+  computed: {
+    imageObject() {
+      return this.$route.params.imageObject;
+    }
   }
 }
 </script>

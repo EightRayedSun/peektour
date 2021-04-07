@@ -1,6 +1,11 @@
 <template>
   <div class="album">
-    {{album}}
+    <!-- {{album}} -->
+    <ul>
+      <li v-for="image in images" :key="image.name">
+        <router-link :to="{ name: 'image', params: { imageId: image.name, imageObject: image }}"><img :src="image.url" /></router-link> 
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -10,6 +15,9 @@ export default {
   computed: {
     album() {
       return this.$route.params.album
+    },
+    images() {
+      return this.album.images;
     }
   }
 }
